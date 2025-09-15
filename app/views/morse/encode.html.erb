@@ -1,1 +1,19 @@
-for encoding
+<h1>Encode</h1>
+
+<%= form_with url: morse_encode_path, method: :get, local: true do |form| %>
+  <div class="mb-3">
+    <% form.label :text, "Enter text to encode:", class: "form-label" %>
+    <%= form.text_area :text, class: "form-control",placeholder: "Enter text to encode", rows: 3 %>
+  </div>
+
+  <%= form.submit "Encode", class: "btn btn-secondary me-2" %>
+<% end %>
+
+<%# For displaying results%>
+
+<% if params[:text].present? %>
+</br>
+  <h2>Result</h2>
+  <p><strong>Text:</strong> <%= params[:text] %></p>
+  <p><strong>Code:</strong> <%= params[:text] %></p>
+<% end %>

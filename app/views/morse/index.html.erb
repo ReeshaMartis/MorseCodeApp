@@ -2,7 +2,7 @@
   <h1 class="mb-4">Welcome to the Morse Code App!</h1>
   <p class="lead">Quickly encode text into Morse code or decode Morse code back to text.</p>
   <div class="mt-4">
-    <a class="btn btn-primary me-2" href="/morse/encode">Encode</a>
-    <a class="btn btn-secondary" href="/morse/decode">Decode</a>
+    <%= link_to 'Encode',morse_encode_path, class:"btn btn-secondary me-2" %>
+    <%= link_to 'Decode',morse_decode_path, class:"btn btn-dark" %>
   </div>
 </div>
