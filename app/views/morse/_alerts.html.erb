@@ -1,0 +1,25 @@
+<%if notice%>
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+    <%=notice%>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+<%end%>
+
+<%if alert%>
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <%=alert%>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+<%end%>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const alerts = document.querySelectorAll(".alert");
+    alerts.forEach((alert) => {
+      setTimeout(() => {
+        alert.classList.remove("show");
+        alert.classList.add("fade");
+      }, 3000);
+    });
+  });
+</script>
