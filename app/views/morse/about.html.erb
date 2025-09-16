@@ -1,7 +1,34 @@
-<!-- app/views/about/index.html.erb -->
+<h1>About Morse Code Encoder & Decoder</h1>
 
-<div class="text-center">
-  <h1 class="mb-4">About</h1>
-  <p class="lead">Welcome to the Morse Code App!</p>
-  <p>Encode your text into Morse code and decode Morse code back into readable text — simple, fast, and easy to use.</p>
-</div>
+<p>
+  This app allows you to convert text into Morse code and decode Morse code back into text.
+</p>
+
+<h2>Encoding</h2>
+<p>
+  The <strong>encode</strong> function takes a string, converts it to uppercase, and replaces each character with its Morse code equivalent from a predefined dictionary. Spaces are added between Morse characters for readability.
+</p>
+
+<p><strong>Example:</strong></p>
+<pre>
+Input: "HELLO"
+Output: ".... . .-.. .-.. ---"
+</pre>
+
+<h2>Decoding</h2>
+<p>
+  The <strong>decode</strong> function takes a string of Morse code, splits it by spaces, and converts each Morse symbol back into the corresponding letter using a reverse dictionary. This ensures efficient and accurate translation back to text.
+</p>
+
+<p><strong>Example:</strong></p>
+<pre>
+Input: ".... . .-.. .-.. ---"
+Output: "HELLO"
+</pre>
+
+<h2>Implementation Notes</h2>
+<ul>
+  <li>We use a <code>Morse</code> class with <code>encode</code> and <code>decode</code> methods.</li>
+  <li>Encoding and decoding operations are O(n) in the length of the input.</li>
+  <li>We create a reverse dictionary for decoding so that lookup is fast (O(1)) for each character.</li>
+</ul>
