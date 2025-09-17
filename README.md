@@ -1,24 +1,16 @@
-# README
+# Morse Code App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a simple **Ruby on Rails** application that can encode and decode text into Morse code.
 
-Things you may want to cover:
+## Features
+- Encode text into Morse code
+- Decode Morse code back into text
+- Built using:
+  - Ruby on Rails
+  - HTML/ERB templates
+  - Basic MVC structure (controllers, services, views)
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Getting Started
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/ReeshaMartis/MorseCodeApp.git
