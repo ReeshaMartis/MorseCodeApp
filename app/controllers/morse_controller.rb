@@ -32,4 +32,10 @@ class MorseController < ApplicationController
   end
 end
 
+def history
+  storage_service = StorageService.new
+  @records = storage_service.index
+end
+
+
 end

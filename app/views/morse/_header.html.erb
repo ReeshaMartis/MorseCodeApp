@@ -17,6 +17,9 @@
           <%= link_to 'Decode',morse_decode_path,class:"nav-link #{'active' if current_page?(morse_decode_path)}"%>
         </li>
         <li class="nav-item">
+          <%= link_to 'History',morse_history_path,class:"nav-link #{'active' if current_page?(morse_history_path)}"%>
+        </li>
+        <li class="nav-item">
           <%= link_to 'About',morse_about_path,class:"nav-link #{'active' if current_page?(morse_about_path)}"%>
         </li>
       </ul>
