@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: postgres
+  password: su
+  host: localhost
+
+development:
+  <<: *default
+  database: morse_code_app_development
+
+test:
+  <<: *default
+  database: morse_code_app_test
+
+production:
+  <<: *default
+  database: morse_code_app_production
+  username: morse_code_app
+  password: <%= ENV['MORSE_CODE_APP_DATABASE_PASSWORD'] %>

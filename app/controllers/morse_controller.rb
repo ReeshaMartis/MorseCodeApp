@@ -6,7 +6,12 @@ class MorseController < ApplicationController
   end
   def encode
     if params[:text].present?
-      @result = MorseService.encode(params[:text])
+      encoded_text = MorseService.encode(params[:text])
+
+      storage_service = StorageService.new
+      @record = storage_service.create(params[:text],encoded_text)
+      @result = @record.translated_text
+
       flash.now[:notice] = "Encoded successfully!"
     else
       flash.now[:alert] = "Please enter text to encode."
@@ -15,7 +20,12 @@ class MorseController < ApplicationController
 
  def decode
   if params[:text].present?
-    @result = MorseService.decode(params[:text])
+    decoded_text = MorseService.decode(params[:text])
+
+    storage_service = StorageService.new
+    @record = storage_service.create(decoded_text,params[:text] )
+    @result = @record.original_text
+
     flash.now[:notice] = "Decoded successfully!"
   else
     flash.now[:alert] = "Please enter Morse code to decode."

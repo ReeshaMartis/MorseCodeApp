@@ -1,0 +1,2 @@
+class Morsestore < ApplicationRecord
+end
